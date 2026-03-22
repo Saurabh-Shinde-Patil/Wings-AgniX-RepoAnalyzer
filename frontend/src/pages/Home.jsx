@@ -3,7 +3,7 @@ import Dashboard from '../components/Dashboard';
 import { useAnalysis } from '../hooks/useAnalysis';
 
 export default function Home() {
-  const { analysisResult, isLoading, error, handleAnalyze } = useAnalysis();
+  const { analysisResult, isLoading, error, handleAnalyze, resetAnalysis } = useAnalysis();
 
   return (
     <>
@@ -22,7 +22,7 @@ export default function Home() {
 
       {/* Results Dashboard */}
       {analysisResult && !isLoading && (
-        <Dashboard data={analysisResult} />
+        <Dashboard data={analysisResult} onReset={resetAnalysis} />
       )}
     </>
   );

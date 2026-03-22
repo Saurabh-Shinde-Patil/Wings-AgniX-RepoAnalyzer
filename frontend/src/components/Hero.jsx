@@ -20,11 +20,11 @@ export default function Hero({ onAnalyze, isLoading }) {
       </div>
       
       <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight">
-        Stop reading code. <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Start understanding it.</span>
+        Stop reading Repository. <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Start understanding it.</span>
       </h1>
       
       <p className="max-w-2xl text-sm sm:text-base md:text-[18px] text-slate-600 dark:text-gray-400 font-medium leading-relaxed tracking-wide transition-colors duration-500">
-        Paste a GitHub link and we'll explain the project for you
+        Paste a GitHub link and I'll explain the Repository for you
       </p>
 
       <form onSubmit={handleSubmit} className="w-full max-w-3xl mt-4 sm:mt-8 relative group">

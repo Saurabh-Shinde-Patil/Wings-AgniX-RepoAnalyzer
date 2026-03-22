@@ -19,5 +19,12 @@ export const useAnalysis = () => {
     }
   };
 
-  return { analysisResult, isLoading, error, handleAnalyze };
+  const resetAnalysis = () => {
+    setAnalysisResult(null);
+    setIsLoading(false);
+    setError(null);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return { analysisResult, isLoading, error, handleAnalyze, resetAnalysis };
 };

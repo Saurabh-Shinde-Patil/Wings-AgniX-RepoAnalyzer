@@ -1,6 +1,6 @@
-import { FolderTree, PlayCircle, Network, ArrowRight, ShieldAlert, FileCode, CheckCircle, BrainCircuit, FileSearch, BookOpen, Flame, ArrowDown, Globe, KeyRound } from 'lucide-react';
+import { FolderTree, PlayCircle, Network, ArrowRight, ShieldAlert, FileCode, CheckCircle, BrainCircuit, FileSearch, BookOpen, Flame, ArrowDown, Globe, KeyRound, Home } from 'lucide-react';
 
-export default function Dashboard({ data }) {
+export default function Dashboard({ data, onReset }) {
   // Expected structure based on new JSON schema from backend
   const { summary, b2, m1, m2, m3, criticalFiles, bugs, apiEndpoints, envVars } = data;
 
@@ -11,6 +11,17 @@ export default function Dashboard({ data }) {
 
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col gap-6 sm:gap-8 md:gap-10 animate-in fade-in slide-in-from-bottom-8 duration-700 pb-10 sm:pb-20">
+      
+      {/* Back to Home Button */}
+      <div className="flex justify-center">
+        <button
+          onClick={onReset}
+          className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-200 font-semibold text-sm shadow-sm hover:shadow-md hover:border-emerald-400 dark:hover:border-emerald-500/50 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300 hover:-translate-y-0.5"
+        >
+          <Home size={18} className="transition-transform duration-300 group-hover:-translate-x-0.5" />
+          Analyze Another Repo
+        </button>
+      </div>
       
       {/* --- B3: HEADER SUMMARIES & DESIGN DECISIONS --- */}
       <div className={`${panelClass} flex flex-col gap-6`}>
